@@ -15,4 +15,4 @@ nrows=1000,
 )
 
 
-st.write(df)
+st.dataframe(df)
