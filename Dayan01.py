@@ -6,6 +6,13 @@ pip.main(["install", "openpyxl"])
 
 st.title ('First tests for cashflow')
 
-df = pd.read_excel('Cashflow02.xlsx')
+df = pd.read_excel(
+    io='Cashflow02.xlsx',
+engine='openpyxl',
+sheet_name='GeneralPipelineProgress',
+usecols='A:S',
+nrows=1000,
+)
+
 
 st.write(df)
